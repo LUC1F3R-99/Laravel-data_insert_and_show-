@@ -20,7 +20,7 @@ class StudentController extends Controller
         return redirect()->back();
     }
 
-    
+
 
     // public function show()
     // {
@@ -32,5 +32,25 @@ class StudentController extends Controller
     {
         $response['students'] = $this->student->all();
         return view('form')->with($response);
+    }
+
+    public function edit($stu_id)
+    {
+        $response['student'] = $this->student->find($stu_id);
+        return view('edit')->with($response);
+    }
+
+    public function update(Request $request, $stu_id)
+    {
+        $student = $this->student->find($stu_id);
+        $student->update(array_merge($student->toArray(), $request->toArray()));
+        return redirect('');
+    }
+
+    public function delete(Request $request, $stu_id)
+    {
+        $student = $this->student->find($stu_id);
+        $student->delete();
+        return redirect('');
     }
 }

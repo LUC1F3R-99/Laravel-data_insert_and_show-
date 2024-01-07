@@ -24,3 +24,6 @@ Route::post('/saved', [StudentController::class, 'save'])->name('student.save');
 Route::get('/', [StudentController::class, 'show']);
 
 Route::get('/userData', [UserController::class,'showData']);
+Route::get('/{stu_id}/edit', [StudentController::class,'edit'])->name('student.edit');
+Route::POST('/{stu_id}/update', [StudentController::class,'update'])->name('student.update');
+Route::get('/{stu_id}/delete', [StudentController::class ,'delete'])->name('student.delete');
