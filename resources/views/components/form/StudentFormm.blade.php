@@ -7,7 +7,7 @@
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Last Name</label>
-            <input type="text" class="form-control" id="" placeholder="Fernando" name="Lname" value="{{ $student->Lname }}">
+            <input type="text" class="form-control" id="" 66 value="{{ $student->Lname }}">
         </div>
         <div class="mb-3">
             <label for="" class="form-label">Address</label>

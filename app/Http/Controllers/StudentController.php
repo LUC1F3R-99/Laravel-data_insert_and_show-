@@ -22,17 +22,17 @@ class StudentController extends Controller
 
 
 
-    // public function show()
-    // {
-    //     $date = Student::all();
-    //     return view('form', ['students' => $date]);
-    // }
-
     public function show()
     {
-        $response['students'] = $this->student->all();
-        return view('form')->with($response);
+        $date = Student::all();
+        return view('form', ['students' => $date]);
     }
+
+    // public function show()
+    // {
+    //     $response['students'] = $this->student->all();
+    //     return view('form')->with($response);
+    // }
 
     public function edit($stu_id)
     {
